@@ -1,6 +1,7 @@
 import {
   StatusBar, StyleSheet, SafeAreaView, View, ScrollView, FlatList
 } from 'react-native';
+
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
 
 import Mocks from './source/mocks/carrinho.js';
@@ -39,6 +40,7 @@ export default function App() {
               <Texto style={styles.titulo}>
                 {Mocks.itens.titulo}
               </Texto>
+              
             </>
           }
         }
@@ -46,8 +48,14 @@ export default function App() {
         ListFooterComponent={
           () => {
             return <>
+              <Texto style={styles.tituloChave}>
+                {Mocks.chave.tituloChave}
+              </Texto>
+              <Texto style={styles.descricaoChave}>
+                {Mocks.chave.descricaoChave}
+              </Texto>
               <FlatList
-                data={Mocks.chave.chaves}
+                data={Mocks.chave.lista}
                 renderItem={Chave}
                 keyExtractor={({ nomeChave }) => nomeChave}
               />
@@ -73,5 +81,18 @@ const styles = StyleSheet.create({
     marginTop: 30,
     marginBottom: 30,
     fontSize: 25
+  },
+  tituloChave:{
+    color:"#cc8500",
+    fontWeight:"bold",
+    marginLeft: 50,
+    marginTop: 30,
+    marginBottom: 5,
+    fontSize: 25
+  },
+  descricaoChave:{
+    fontSize: 15,
+    marginBottom: 20,
+    marginLeft: 60
   }
 });

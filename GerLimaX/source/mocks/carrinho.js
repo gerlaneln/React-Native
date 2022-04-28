@@ -47,8 +47,9 @@ const carrinho = {
         ]
     },
     chave:{
-        tituloChave: "Chaves inclusas",
-        chaves:[
+        tituloChave: "Chaves",
+        descricaoChave: "Incluso na compra para facilitar instação.",
+        lista:[
             {
                 nomeChave: "Chave de fenda",
                 imagemChave: chaveFenda
