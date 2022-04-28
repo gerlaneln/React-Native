@@ -8,7 +8,7 @@ export default function Chave({item:{ nomeChave, imagemChave }}){
         <View style={estilos.chave} key={nomeChave}>
             <Texto style={estilos.estiloLista}>-</Texto>
             <Image style={estilos.imagem} source={imagemChave} />
-            <Texto style={estilos.Chave}>{nomeChave}</Texto>
+            <Texto style={estilos.nChave}>{nomeChave}</Texto>
         </View>
 
     </>;
@@ -27,7 +27,7 @@ const estilos = StyleSheet.create({
         width: 40,
         height: 40
     },
-    Chave:{
+    nChave:{
         fontSize: 18,
         color: "#464646",
         marginLeft: 15,
